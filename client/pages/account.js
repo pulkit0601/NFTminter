@@ -23,7 +23,7 @@ const Account = ({ signerAddress }) => {
       setNftData([]);
       let { data } = await axios({
         method: 'get',
-        url: `https://api.covalenthq.com/v1/137/address/${signerAddress}/balances_v2/?nft=true&key=${process.env.covalent_key}`
+        url: `https://api.covalenthq.com/v1/137/address/${signerAddress}/balances_v2/?key=${process.env.covalent_key}&nft=true`
    
       });
      
