@@ -28,7 +28,7 @@ jobs:
         with:
           ref: master
       - uses: actions/setup-node@v2
-         with:
+        with:
           node-version: '17.0.1'
 
       # Runs a single command using the runners shell
