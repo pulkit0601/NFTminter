@@ -60,4 +60,3 @@ jobs:
           AWS_REGION: 'us-east-1'
           AWS_ACCESS_KEY_ID: ${{ secrets.MASTER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.MASTER_AWS_SECRET_ACCESS_KEY }}
-```
