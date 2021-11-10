@@ -40,6 +40,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Export
+        run: npm run export
+
       # Runs a set of commands using the runners shell
       - name: Uploading to s3 bucket
         uses: jakejarvis/s3-sync-action@master
@@ -50,7 +53,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.MASTER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.MASTER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-1' # optional: defaults to us-east-1
-          SOURCE_DIR: 'build' # optional: defaults to entire repository
+          SOURCE_DIR: 'client/out' # optional: defaults to entire repository
 
       - name: invalidate cloudfront distribution and wait for completion
         uses: muratiger/invalidate-cloudfront-and-wait-for-completion-action@master
