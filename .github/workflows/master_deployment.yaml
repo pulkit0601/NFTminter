@@ -35,7 +35,7 @@ jobs:
 
       - name: INSTALL
         run: npm ci
-        run: export NODE_OPTIONS=--openssl-legacy-provider 
+        
       # Runs a single command using the runners shell
       - name: Build
         run: npm run build
